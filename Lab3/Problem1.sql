@@ -89,7 +89,7 @@ insert into salemanagerment.`clients` values
 ('C104','Tran Tuan','Phu Tan','Thu Dau Mot',700080,'Binh Duong',8000,0),
 ('C105','Ho Nhu','Chanh My','Hanoi',700005,'Hanoi',7000,150),
 ('C106','Tran Hai','Phu Hoa','Ho Chi Minh',700002,'Ho Chi Minh',7000,1300),
-('C107','Nguyen Thanh ','Hoa Phu','Dai An',700023,'Binh Duong',8500,7500),
+('C107','Nguyen Thanh','Hoa Phu','Dai An',700023,'Binh Duong',8500,7500),
 ('C108','Nguyen Sy','Tan An','Da Lat',700032,'Lam Dong ',15000,1000),
 ('C109','Duong Thanh','Phu Hoa','Ho Chi Minh',700011,'Ho Chi Minh',12000,8000),
 ('C110','Tran Minh','Phu My','Hanoi',700005,'Hanoi',9000,1000);
@@ -112,7 +112,9 @@ insert into salemanagerment.salesman values
 ('S003','Khoa','Phu Hoa','Thu Dau Mot',700051,'Binh Duong',17500,40,30,'0904589632'),
 ('S004','Tien','Phu Hoa','Dai An',700023,'Binh Duong',16500,70,72,'0908654723'),
 ('S005','Deb','Hoa Phu','Thu Dau Mot',700051,'Binh Duong',13500,60,48,'0903213659'),
-('S006','Tin','Chanh My','Da Lat',700032,'Lam Dong',20000,80,55,'0907853497');
+('S006','Tin','Chanh My','Da Lat',700032,'Lam Dong',20000,80,55,'0907853497'),
+('S007','Quang','Chanh My','Da Lat',700032,'Lam Dong',25000,90,95,'0900853487'),
+('S008','Hoa','Hoa Phu','Thu Dau Mot',700051,'Binh Duong',13500,50,75,'0998213659');
 
  
 insert into salemanagerment.salesorder values 
@@ -129,7 +131,9 @@ insert into salemanagerment.salesorder values
 ('O20011','2022-05-08','C107','S005','Ready to Ship',null,'Cancelled'),
 ('O20012','2022-05-12','C108','S004','On Way',null,'Successful'),
 ('O20013','2022-05-16','C109','S001','Ready to Ship',null,'In Process'),
-('O20014','2022-05-16','C110','S001','On Way',null,'Successful');
+('O20014','2022-05-16','C110','S001','On Way',null,'Successful'),
+('O20015','2022-05-12','C108','S007','On Way', '2022-05-15','Successful'),
+('O20016','2022-05-16','C109','S008','Ready to Ship',null,'In Process');
 
 insert into salemanagerment.SalesOrderDetails values
 ('O20001','P1001',5),
@@ -150,7 +154,11 @@ insert into salemanagerment.SalesOrderDetails values
 ('O20012','P1005',3),
 ('O20012','P1001',2),
 ('O20013','P1006',10),
-('O20014','P1002',20);
+('O20014','P1002',20),
+('O20015','P1008',15),
+('O20015','P1007',10),
+('O20016','P1007',20),
+('O20016','P1003',5);
 
 DESCRIBE salemanagerment.clients;
 DESCRIBE salemanagerment.product;
